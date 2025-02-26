@@ -11,47 +11,68 @@ using UnityEngine.SceneManagement;
 */
 public class ObjectPickup : MonoBehaviour
 {
+    //variables
     [SerializeField] private GameObject pickupPrompt;
     private bool promptOn;
+    public AudioSource pickUp;
+    public GameObject alarm;
 
-    private void Awake()
+    //initially set prompt to false
+    private void Start()
     {
         pickupPrompt.SetActive(false);
         promptOn = false;
+        //alarm.SetActive(false);
     }
 
     private void Update()
     {
         if(promptOn == true && Input.GetKeyDown(KeyCode.E))
         {
+            alarm.SetActive(true);
+
             //check if level 1
-            if(SceneManager.GetActiveScene().name == "1.Submarine")
+            if (SceneManager.GetActiveScene().name == "1.Submarine")
             {
                 //set items in level manager
 
                 GameObject levelManager = GameObject.Find("LevelManager");
 
-                if(!levelManager.GetComponent<LevelOneManager>().getItem1())
+                if (this.gameObject.tag == "Button")
                 {
-                    levelManager.GetComponent<LevelOneManager>().setItem1();
+                    alarm.SetActive(true);
+
+                    levelManager.GetComponent<TimerAlterDisplay>().timerRunning = true;
+                    levelManager.GetComponent<LevelOneManager>().turnOnObjects();
                 }
-                else if(!levelManager.GetComponent<LevelOneManager>().getItem2())
+                else
                 {
-                    levelManager.GetComponent<LevelOneManager>().setItem2();
-                }
-                else if(!levelManager.GetComponent<LevelOneManager>().getItem3())
-                {
-                    levelManager.GetComponent<LevelOneManager>().setItem3();
+                    pickUp.Play();
+                    if (!levelManager.GetComponent<LevelOneManager>().getItem1())
+                    {
+                        levelManager.GetComponent<LevelOneManager>().setItem1();
+                    }
+                    else if (!levelManager.GetComponent<LevelOneManager>().getItem2())
+                    {
+                        levelManager.GetComponent<LevelOneManager>().setItem2();
+                    }
+                    else if (!levelManager.GetComponent<LevelOneManager>().getItem3())
+                    {
+                        levelManager.GetComponent<LevelOneManager>().setItem3();
+                    }
                 }
                 
             }
 
+            
             promptOn = false;
             pickupPrompt.SetActive(false);
-            Destroy(this.gameObject);
+            GetComponent<Renderer>().enabled = false;
+            Destroy(this.gameObject, 1);
         }
     }
 
+    //activates prompt on entry
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
@@ -60,6 +81,7 @@ public class ObjectPickup : MonoBehaviour
             promptOn = true;
         }
     }
+    //closes prompt on exit
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
