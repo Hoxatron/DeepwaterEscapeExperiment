@@ -1713,7 +1713,7 @@ VideoPlayer:
   m_AspectRatio: 2
   m_DataSource: 0
   m_TimeUpdateMode: 1
-  m_PlaybackSpeed: 1.36
+  m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
   m_TargetAudioSources: []
   m_DirectAudioVolumes: []
@@ -3975,7 +3975,7 @@ VideoPlayer:
   m_AspectRatio: 2
   m_DataSource: 0
   m_TimeUpdateMode: 1
-  m_PlaybackSpeed: 1.36
+  m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
   m_TargetAudioSources: []
   m_DirectAudioVolumes: []
@@ -5915,33 +5915,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594501747}
   m_Mesh: {fileID: 6357282866014537507, guid: 23ac4bf77d085744890898e3917147c0, type: 3}
---- !u!1 &1609312720 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6582732737887979991, guid: 7fd0c00f9d8ca4e52864bbb03f146856,
-    type: 3}
-  m_PrefabInstance: {fileID: 1978202296}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1609312723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609312720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a37d66227c0a83c4c84ead680a44812e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tmpProText: {fileID: 1798615195}
-  delayBeforeStart: 0
-  timeBtwChars: 0.1
-  leadingChar: 
-  leadingCharBeforeDelay: 0
-  startOnEnable: 1
-  clearAtStart: 0
-  startOnCollision: 0
-  collisionExitOptions: 0
 --- !u!1 &1643701921
 GameObject:
   m_ObjectHideFlags: 0
@@ -6810,7 +6783,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b3848e3027b55421aa764239f8c26e01, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc42c47f3df17254dac368e6f084acb2, type: 2}
   m_sharedMaterial: {fileID: -7427736588429782329, guid: b3848e3027b55421aa764239f8c26e01,
     type: 2}
   m_fontSharedMaterials: []
@@ -6875,7 +6848,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1798615196
@@ -6898,12 +6871,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a37d66227c0a83c4c84ead680a44812e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 0}
   tmpProText: {fileID: 1798615195}
   delayBeforeStart: 0
-  timeBtwChars: 0.05
+  timeBtwChars: 0.1
   leadingChar: 
-  leadingCharBeforeDelay: 1
-  startOnEnable: 1
+  leadingCharBeforeDelay: 0
+  startOnEnable: 0
   clearAtStart: 0
   startOnCollision: 0
   collisionExitOptions: 0
@@ -7835,11 +7809,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6582732737887979991, guid: 7fd0c00f9d8ca4e52864bbb03f146856,
-        type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 1609312723}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fd0c00f9d8ca4e52864bbb03f146856, type: 3}
 --- !u!1 &2015499411
 GameObject:
