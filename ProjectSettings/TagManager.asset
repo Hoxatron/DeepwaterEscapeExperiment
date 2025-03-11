@@ -9,6 +9,7 @@ TagManager:
   - Button
   - Boss
   - PauseMenuUI
+  - settingsMenuUI
   layers:
   - Default
   - TransparentFX
