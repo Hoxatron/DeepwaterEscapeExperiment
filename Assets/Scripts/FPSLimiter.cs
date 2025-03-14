@@ -5,6 +5,7 @@ using UnityEngine;
 /*
  * This script imposes an FPS cap which triggers if V-Sync isn't turned on for whatever reason. 
  * Attempts to cap it to the reported monitor refresh rate, but won't go below fallbackMaxFrameRate.
+ * 
  */
 public class FPSLimiter : MonoBehaviour
 {
@@ -22,7 +23,8 @@ public class FPSLimiter : MonoBehaviour
             Application.targetFrameRate = fallbackMaxFrameRate;
         }
 
-        else {
+        else
+        {
             Application.targetFrameRate = (int)reportedRefreshRate;
         }
     }
