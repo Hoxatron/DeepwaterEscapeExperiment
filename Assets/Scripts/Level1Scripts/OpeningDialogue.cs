@@ -26,7 +26,4 @@ public class OpeningDialogue : MonoBehaviour
         yield return new WaitForSeconds(5);
         DialogueManager.GetInstance().EnterDialogueMode(inkJson);
     }
-
-   
-
 }
