@@ -9,7 +9,10 @@ TagManager:
   - Button
   - Boss
   - PauseMenuUI
-  - settingsMenuUI
+  - Debris
+  - WhiteImage
+  - Gun
+  - Obstacle
   layers:
   - Default
   - TransparentFX
