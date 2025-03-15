@@ -60,12 +60,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Perfect DOS VGA 437 Win
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: -1149088773
   material: {fileID: 5552738195010539617}
-  materialHashCode: 0
+  materialHashCode: 18975355
   m_Version: 1.1.0
   m_SourceFontFileGUID: 11d510656badacd4ab02cf1d740bbd6b
-  m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 11d510656badacd4ab02cf1d740bbd6b, type: 3}
+  m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 11d510656badacd4ab02cf1d740bbd6b,
+    type: 3}
   m_SourceFontFile: {fileID: 0}
   m_AtlasPopulationMode: 0
   m_FaceInfo:
