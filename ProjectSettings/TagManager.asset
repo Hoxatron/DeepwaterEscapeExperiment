@@ -10,9 +10,9 @@ TagManager:
   - Boss
   - PauseMenuUI
   - Debris
-  - Enemy
+  - WhiteImage
   - Gun
-  - UI
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -25,7 +25,7 @@ TagManager:
   - 
   - 
   - Player
-  - Enemy Hitbox
+  - 
   - 
   - 
   - 
