@@ -7185,7 +7185,7 @@ GameObject:
   - component: {fileID: 1647020767}
   - component: {fileID: 1647020768}
   m_Layer: 0
-  m_Name: LevelManagerTest
+  m_Name: LevelManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
