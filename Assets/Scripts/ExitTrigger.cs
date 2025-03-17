@@ -30,8 +30,11 @@ public class ExitTrigger : MonoBehaviour
 
     IEnumerator fadeToNextScene()
     {
+        mainCamera.GetComponent<CameraFadeOut>().fadeOut = true;
+        yield return new WaitForSeconds(3);
         mainCamera.SetActive(false);
         outroCamera.SetActive(true);
+        outroCamera.GetComponent<CameraFadeIn>().fadein = true;
         yield return new WaitForSeconds(1);
         outroCamera.GetComponent<CameraFadeOut>().fadeOut = true;
         ExplosionSound1.Play();
