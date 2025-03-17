@@ -13,7 +13,6 @@ TagManager:
   - WhiteImage
   - Gun
   - Obstacle
-  - UI
   layers:
   - Default
   - TransparentFX
