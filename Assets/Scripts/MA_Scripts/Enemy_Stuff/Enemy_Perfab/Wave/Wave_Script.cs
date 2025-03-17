@@ -67,13 +67,18 @@ public class Wave_Script : MonoBehaviour
     }
 
 
+    public void startWave()
+    {
+        StartCoroutine(MoveAndScale());
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Boss"))
         {
             StartCoroutine(MoveAndScale());
         }
-        ThirdPersonController playerController = other.GetComponent<ThirdPersonController>();
+        FirstPersonController playerController = other.GetComponent<FirstPersonController>();
 
         if (playerController != null)
         {
@@ -93,7 +98,7 @@ public class Wave_Script : MonoBehaviour
         }
     }
 
-    private IEnumerator DisableMovemant(ThirdPersonController pControl, float longTime)
+    private IEnumerator DisableMovemant(FirstPersonController pControl, float longTime)
     {
         pControl.SetMovement(false);
         Debug.Log("Player movement disable");
