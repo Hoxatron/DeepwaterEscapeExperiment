@@ -16,6 +16,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip dialogueTypingSoundClip;
+
+    private AudioSource audioSource;
 
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
@@ -32,6 +36,8 @@ public class DialogueManager : MonoBehaviour
             Debug.LogWarning("Found more than one Dialogue manager in the scene!");
         }
         instance = this;
+
+        audioSource = this.gameObject.AddComponent<AudioSource>();
     }
 
     //returns if there is an active instance of the DialogueManager
@@ -89,6 +95,10 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
+            if (dialogueTypingSoundClip != null)
+            {
+                audioSource.PlayOneShot(dialogueTypingSoundClip);
+            }
             dialogueText.text = currentStory.Continue();
         }
         else

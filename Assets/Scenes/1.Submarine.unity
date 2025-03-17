@@ -9783,6 +9783,11 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 694802677}
+    - target: {fileID: 3349326175999831296, guid: 7fd0c00f9d8ca4e52864bbb03f146856,
+        type: 3}
+      propertyPath: dialogueTypingSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a842ecdc33932e943812b654bf87988d, type: 3}
     - target: {fileID: 6582732737887979991, guid: 7fd0c00f9d8ca4e52864bbb03f146856,
         type: 3}
       propertyPath: m_Name
