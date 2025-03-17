@@ -10,10 +10,10 @@ using UnityEngine;
 
 public class ClamPlayerHealthRef : MonoBehaviour
 {
-    private Player_Health playerHealth;
+    [SerializeField] private Player_Health playerHealth;
     private void Awake()
     {
-        playerHealth = GameObject.FindGameObjectWithTag("UI").GetComponent<Player_Health>();
+        //playerHealth = GameObject.FindGameObjectWithTag("UI").GetComponent<Player_Health>();
     }
 
     public Player_Health GetPlayerHealth()
