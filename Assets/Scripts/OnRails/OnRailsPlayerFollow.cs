@@ -32,7 +32,7 @@ public class OnRailsPlayerFollow : MonoBehaviour
 
     void LocalMove(float x, float y, float speed)
     {
-        transform.localPosition += new Vector3(x, y, 0) * speed * Time.deltaTime;
+        transform.localPosition += speed * Time.deltaTime * new Vector3(x, y, 0);
     }
 
     void ClampPosition()
@@ -48,4 +48,6 @@ public class OnRailsPlayerFollow : MonoBehaviour
         Vector3 targetEulerAngles = target.localEulerAngles;
         target.localEulerAngles = new Vector3(targetEulerAngles.x, targetEulerAngles.y, Mathf.LerpAngle(targetEulerAngles.z, -axis * leanLimit, lerpTime));
     }
+
+
 }

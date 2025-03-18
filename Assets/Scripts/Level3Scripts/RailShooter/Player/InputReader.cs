@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using KBCore.Refs;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
