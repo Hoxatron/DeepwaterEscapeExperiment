@@ -60,6 +60,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (!dialogueIsPlaying)
         {
+            dialogueComplete = false;
             return;
         }
 
