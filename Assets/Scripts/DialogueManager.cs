@@ -34,6 +34,8 @@ public class DialogueManager : MonoBehaviour
             Debug.LogWarning("Found more than one Dialogue manager in the scene!");
         }
         instance = this;
+
+        audioSource = this.gameObject.AddComponent<AudioSource>();
     }
 
     // Returns if there is an active instance of the DialogueManager
