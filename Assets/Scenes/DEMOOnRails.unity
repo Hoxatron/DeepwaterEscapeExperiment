@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: 18620894}
   - component: {fileID: 18620893}
   - component: {fileID: 18620895}
+  - component: {fileID: 18620896}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -396,6 +397,18 @@ MonoBehaviour:
   bulletSpeed: 40
   gunShotSound: {fileID: 8300000, guid: d61109a9026689d4e8a05b8d09343549, type: 3}
   audioSource: {fileID: 524305371}
+--- !u!114 &18620896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18620890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9ba1364cfc7e264dbd0388793cd50b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &75045161
 PrefabInstance:
   m_ObjectHideFlags: 0

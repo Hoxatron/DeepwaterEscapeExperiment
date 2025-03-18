@@ -12,4 +12,5 @@ public class PlayerObstacleCollision : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
+
 }
