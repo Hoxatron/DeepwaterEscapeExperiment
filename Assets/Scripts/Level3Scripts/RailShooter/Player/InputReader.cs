@@ -2,7 +2,6 @@ using KBCore.Refs;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-
 public class InputReader : MonoBehaviour
 {
     [SerializeField, Self] private PlayerInput playerInput;

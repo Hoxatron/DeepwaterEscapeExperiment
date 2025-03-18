@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class OnRailsPlayerFollow : MonoBehaviour
@@ -48,6 +46,5 @@ public class OnRailsPlayerFollow : MonoBehaviour
         Vector3 targetEulerAngles = target.localEulerAngles;
         target.localEulerAngles = new Vector3(targetEulerAngles.x, targetEulerAngles.y, Mathf.LerpAngle(targetEulerAngles.z, -axis * leanLimit, lerpTime));
     }
-
 
 }
