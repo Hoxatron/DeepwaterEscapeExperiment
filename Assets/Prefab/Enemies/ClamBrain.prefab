@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 4177512266083988465}
   - component: {fileID: 2975031761017523004}
   - component: {fileID: 7464339356427821388}
+  - component: {fileID: 8767545851967918520}
   m_Layer: 0
   m_Name: ClamBody
   m_TagString: Enemy
@@ -217,6 +218,21 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8767545851967918520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5110792642632622131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc6f4a7213dc74a7e997c29d3d615421, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyHealth: 25
+  EnemyDmg: 25
+  EnColl: {fileID: 0}
 --- !u!1001 &325229109399234304
 PrefabInstance:
   m_ObjectHideFlags: 0
