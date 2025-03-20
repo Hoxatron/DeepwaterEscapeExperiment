@@ -29,10 +29,18 @@ public class ClamWalker : MonoBehaviour
     [Tooltip("The amount of damage the clam does.")]
     public int damage;
 
+    [Header("Patrol Variables")]
+    [Tooltip("Does the clam patrol? Enables below variables to work.")]
+    public bool patrols;
+    
+
     private void Start()
     {
         clamTransform = this.GetComponent<Transform>();
         playerHealth = GetComponentInParent<ClamPlayerHealthRef>().GetPlayerHealth();
+        if (patrols) {
+
+        }
     }
 
     private void FixedUpdate()
@@ -72,7 +80,7 @@ public class ClamWalker : MonoBehaviour
     }
 
     // Don't use Update() since we don't need to calculate AI stuff every single frame, especially for a mob enemy.
-   
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) 
