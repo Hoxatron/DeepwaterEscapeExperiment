@@ -35,7 +35,7 @@ public class DialogueManager : MonoBehaviour
         }
         instance = this;
 
-        audioSource = this.gameObject.AddComponent<AudioSource>();
+        //audioSource = this.gameObject.AddComponent<AudioSource>();
     }
 
     // Returns if there is an active instance of the DialogueManager
@@ -60,6 +60,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (!dialogueIsPlaying)
         {
+            dialogueComplete = false;
             return;
         }
 
