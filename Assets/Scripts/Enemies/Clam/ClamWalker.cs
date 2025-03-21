@@ -109,8 +109,6 @@ public class ClamWalker : MonoBehaviour
         {
             playerHealth.TakeDamage(damage);
             canHurt = false; // Make sure they can't get hurt multiple times in one jump.
-            //hitStop = true;
-            //Time.timeScale = 0f;
         }
     }
 
